@@ -1,8 +1,7 @@
-import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {
   return <>
-  This is the home page
+  <h2>Create images with your mind</h2>
    </>
 }
