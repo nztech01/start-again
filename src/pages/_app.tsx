@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app'
-import "../App.css"
+import "./App.css"
 
 export default function App({ Component, pageProps }: AppProps) {
   return <div className='app-main'>
