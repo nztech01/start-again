@@ -29,3 +29,15 @@ h2 {
      resize: none;
      box-shadow: 2px 2px 5px rgb(165, 163, 163);
 }
+
+button {
+padding: 1rem 2rem;
+background-color: lightblue;
+color: white;
+border: 2px solid rgb(33, 182, 232);
+border-radius: 5px;
+font-size: 1.2rem;
+cursor: pointer;
+margin-bottom: 1rem;
+transition: all 0.2s ease-in-out;
+}
