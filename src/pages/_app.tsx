@@ -30,4 +30,5 @@ export default function App({ Component, pageProps }: AppProps) {
       placeholder="Create any type of Image you can think of with as much added descrition as you would like"
     />
     <button onClick={generateImage}>Generate Image</button>
-  </div>}
+  </div>
+  }

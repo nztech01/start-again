@@ -4,5 +4,6 @@ dotenv.config();
 
 module.exports = {
   publicRuntimeConfig: {
-    apiKey: process.env.APIKEY
-  }}
+    apiKey: process.env.API_KEY
+  }
+};
