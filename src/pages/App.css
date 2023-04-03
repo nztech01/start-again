@@ -4,3 +4,10 @@ body {
      font-family:("poppins",sans-serif);
 }
 
+.app-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #6f0871;
+}
+
