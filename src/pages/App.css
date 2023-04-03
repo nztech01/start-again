@@ -14,5 +14,18 @@ h2 {
      text-align: center;
      margin-bottom: 1rem;
      opacity: .6;
-     text-shadow: 1px 1px;
+     text-shadow: 1px 1px white;
+}
+
+.app-input {
+     width: 35%;
+     height: 10rem;
+     opacity: .5;
+     margin-bottom: 1rem;
+     padding: 1rem;
+     font-size: 1.2rem;
+     border: 1px solid lightgrey;
+     border-radius: 5px;
+     resize: none;
+     box-shadow: 2px 2px 5px rgb(165, 163, 163);
 }
