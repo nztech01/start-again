@@ -10,8 +10,8 @@ export default function App({ Component, pageProps }: AppProps) {
   if (!apiKey) {
     throw new Error('apiKey is not found in config file')
   }
-  const configeration = new Configuration({ apiKey });
-  const openai = new OpenAIApi(configeration)
+  const configuration = new Configuration({ apiKey });
+  const openai = new OpenAIApi(configuration);
 
   const generateImage = async () => {
 
@@ -31,4 +31,4 @@ export default function App({ Component, pageProps }: AppProps) {
     />
     <button onClick={generateImage}>Generate Image</button>
   </div>
-  }
+  };
