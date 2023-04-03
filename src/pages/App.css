@@ -31,19 +31,19 @@ h2 {
 }
 
 button {
-padding: 1rem 2rem;
-background-color: lightblue;
-color: white;
-border: 2px solid rgb(33, 182, 232);
-border-radius: 5px;
-font-size: 1.2rem;
-cursor: pointer;
-margin-bottom: 1rem;
-transition: all 0.2s ease-in-out;
+     padding: 1rem 2rem;
+     background-color: lightblue;
+     color: white;
+     border: 2px solid rgb(33, 182, 232);
+     border-radius: 5px;
+     font-size: 1.2rem;
+     cursor: pointer;
+     margin-bottom: 1rem;
+     transition: all 0.2s ease-in-out;
 }
 
 button:hover {
      background-color: rgb(17, 113, 138);
-     color:aliceblue;
+     color: aliceblue;
      border: 1px solid rgb(134, 139, 138);
 }
