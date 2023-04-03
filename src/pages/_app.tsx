@@ -13,13 +13,13 @@ export default function App({ Component, pageProps }: AppProps) {
   const configuration = new Configuration({ apiKey });
   const openai = new OpenAIApi(configuration);
 
-  const generateImage = async () => {
+  async function generateImage(): Promise<void> {
 
     const res = await openai.createImage({
       prompt: "a white siamese cat",
       n: 1,
       size: "1024x1024"
-    })
+    });
     const data = res.data;
   }
 
