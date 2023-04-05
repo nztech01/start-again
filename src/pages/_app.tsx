@@ -13,22 +13,23 @@ export default function App({ Component, pageProps }: AppProps) {
   const configuration = new Configuration({ apiKey });
   const openai = new OpenAIApi(configuration);
 
-  async function generateImage(): Promise<void> {
+    const generateImage = async () => {
 
-    const res = await openai.createImage({
-      prompt: "a white siamese cat",
-      n: 1,
-      size: "1024x1024"
-    });
-    const data = res.data;
-  }
+      const res = await openai.createImage({
+        prompt: "a white siamese cat",
+        n: 1,
+        size: "1024x1024"
+      })
+      const data = res.data;
+      console.log(data);
+    }
 
-  return <div className='app-main'>
-    <h2>Create images with your mind</h2>
-    <textarea
-      className="app-input"
-      placeholder="Create any type of Image you can think of with as much added descrition as you would like"
-    />
-    <button onClick={generateImage}>Generate Image</button>
-  </div>
+    return <div className='app-main'>
+      <h2>Create images with your mind</h2>
+      <textarea
+        className="app-input"
+        placeholder="Create any type of Image you can think of with as much added descrition as you would like"
+      />
+      <button onClick={generateImage}>Generate Image</button>
+    </div>
   };
