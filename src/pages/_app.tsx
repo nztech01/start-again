@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
       size: "1024x1024"
     })
     const data = res.data;
-
+    setResult(data.data[0].url || 'no image found');
   }
 
   return <div className='app-main'>
