@@ -8,6 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   const [result, setResult] = useState('https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png')
   const [prompt, setPrompt] = useState("");
+  const [loading, setLoading] = useState (false);
   const { publicRuntimeConfig } = getConfig();
   const apiKey = (typeof publicRuntimeConfig !== 'undefined' && publicRuntimeConfig.apiKey) ? publicRuntimeConfig.apiKey : process.env.APIKEY;
   if (!apiKey) {
@@ -17,12 +18,13 @@ export default function App({ Component, pageProps }: AppProps) {
   const openai = new OpenAIApi(configuration);
 
   const generateImage = async () => {
-
+    setLoading(true);
     const res = await openai.createImage({
       prompt: prompt,
       n: 1,
       size: "1024x1024"
-  })
+    })
+    setLoading(false);
     const data = res.data;
     setResult(data.data[0].url || 'no image found');
   }
@@ -35,8 +37,12 @@ export default function App({ Component, pageProps }: AppProps) {
       onChange={(e) => setPrompt(e.target.value)}
     />
     <button onClick={generateImage}>Generate Image</button>
-    <>
-      <img src={result} alt="result" />
+    <>{loading ? (
+      <>
+        <h3>Artist Working</h3></>
+    )
+      : <img src={result} alt="result" />
+    }
     </>
   </div>
-};
+}
