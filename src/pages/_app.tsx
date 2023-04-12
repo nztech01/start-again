@@ -1,9 +1,12 @@
 import type { AppProps } from 'next/app';
 import "./App.css";
+import {useState}from 'react';
 import { Configuration, OpenAIApi } from "openai";
 import getConfig from 'next/config';
 
 export default function App({ Component, pageProps }: AppProps) {
+
+  const[result, setResult] = useState('https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png')
 
   const { publicRuntimeConfig } = getConfig();
   const apiKey = (typeof publicRuntimeConfig !== 'undefined' && publicRuntimeConfig.apiKey) ? publicRuntimeConfig.apiKey : process.env.APIKEY;
@@ -31,5 +34,8 @@ export default function App({ Component, pageProps }: AppProps) {
       placeholder="Create any type of Image you can think of with as much added descrition as you would like"
     />
     <button onClick={generateImage}>Generate Image</button>
+    <>
+     <img src={result} alt="result" />
+    </>
   </div>
 };
