@@ -39,7 +39,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <button onClick={generateImage}>Generate Image</button>
     <>{loading ? (
       <>
-        <h3>Artist Working</h3></>
+        <h3>An Artist is Working on the Image!</h3></>
     )
       : <img src={result} alt="result" />
     }
