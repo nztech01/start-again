@@ -32,8 +32,8 @@ h2 {
 
 button {
      padding: 1rem 2rem;
-     background-color: lightblue;
-     color: white;
+     background-color: rgb(110, 28, 181);
+     color: rgb(27, 11, 241);
      border: 2px solid rgb(33, 182, 232);
      border-radius: 5px;
      font-size: 1.2rem;
